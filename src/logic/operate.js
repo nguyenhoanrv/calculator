@@ -4,7 +4,7 @@ export default function operate(n1, n2, operation) {
   two = Number(n2)
   if (operation === '÷') {
     two = Number(n2) || 1;
-    return (one / two);
+    return (two / one);
   }
   if (operation === 'x') {
     two = Number(n2) || 0;
@@ -14,7 +14,7 @@ export default function operate(n1, n2, operation) {
     return one + two;
   }
   if (operation === '-') {
-    return one - two;
+    return two - one;
   }
 
 }

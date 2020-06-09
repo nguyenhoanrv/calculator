@@ -78,15 +78,15 @@ export default function (obj, buttonName) {
 
   if (obj.operation) {
     return {
-      prevNumber: operate(obj.nextNumber, obj.prevNumber, obj.operation),
+      prevNumber: operate(obj.prevNumber, obj.nextNumber, obj.operation),
       nextNumber: null,
       operation: buttonName,
     };
   }
 
-  // if (!obj.prevNumber) {
-  //   return { operation: buttonName };
-  // }
+  if (obj.prevNumber) {
+    return { operation: buttonName };
+  }
 
   return {
     prevNumber: obj.nextNumber,
